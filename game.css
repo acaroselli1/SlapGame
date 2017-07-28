@@ -1,0 +1,17 @@
+*{outline:1px red solid;}
+
+.one{
+    height:25vh;
+}
+.two-column{
+    display:flex;
+    justify-content:center;
+}
+.three{
+    height:5vh;
+}
+
+.four-column{
+    display:flex;
+    justify-content:center;
+}
