@@ -1,17 +1,64 @@
 *{outline:1px red solid;}
+body{
+    background-image:url("http://pre07.deviantart.net/a33c/th/pre/f/2008/037/4/3/cartoon_landscape_2___large_by_marcusaxavier77.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    height:100%;
+    font-family: "Bangers",cursive;
+} 
 
-.one{
-    height:25vh;
+.update{
+   display:flex;
+   justify-content:space-around;
+   align-content:center; 
+   font-size:4rem;
 }
-.two-column{
-    display:flex;
-    justify-content:center;
+
+.one {
+    height:20vh;
 }
+.two{
+   display:flex;
+   align-items:center;
+   height:75vh;
+
+}
+
 .three{
-    height:5vh;
+    height:10vh;
+}
+.reset{
+   display:flex;
+   justify-content:center;
 }
 
-.four-column{
+.tree{
     display:flex;
     justify-content:center;
+    align-self:flex-end;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    font-size:3rem;
+}
+
+button{
+    border-radius:30px;
+}
+#name, #hits, #health{
+    color:red;
+}
+
+#easy:hover{
+    background-color:green;
+}
+
+#medium:hover{
+    background-color:yellow;
+}
+
+#mega:hover{
+    background-color:red;
 }

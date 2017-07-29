@@ -1,7 +1,3 @@
-//var health = 100;
-//var name ="tree";
-//var hits=0;
-
 
 function easyChop(){
 
@@ -26,6 +22,15 @@ function megaChop(){
     
 }
 
+function update(){
+  var healthDisplay = document.getElementById("health");
+  healthDisplay.innerText=tree.health;
+  var hitsDisplay = document.getElementById("hits");
+  hitsDisplay.innerText=tree.hits;
+  var nameDisplay = document.getElementById("name");
+  nameDisplay.innerText=tree.name;
+  tree.hits++;
+}
 
 function Item (name,modifier,description){
     this.name = name;
@@ -35,15 +40,11 @@ function Item (name,modifier,description){
 
 }
 var items ={
-    disease: new Item("disease",.5,"Tree is sick!"),
-    drought: new Item("drought",.5, "Tree needs water!"),
-    insects: new Item("insects",1, "Tree needs insecticide!")
+    disease: new Item("disease",2,"Tree is sick!"),
+    drought: new Item("drought",2, "Tree needs water!"),
+    insects: new Item("insects",2, "Tree needs insecticide!")
 
 }
-
-
-//chop();
-
 
 function Target(name,health,hits){
     this.name =name;
@@ -55,35 +56,49 @@ function Target(name,health,hits){
 
 var tree = new Target("tree", 100,0);
 
+/*function draw(itemArr) {
+    
+    var buttonTemplate = '';
+
+    for (var i = 0; i < tree.items.length; i++) {
+        var item = tree.items[i];
+        //check number of pets, to determine status
+        
+        buttonTemplate += `
+       <button onclick="${item}()">${item}!</button>
+        `
+    }
+    document.getElementById('mod-buttons').innerHTML = buttonTemplate;
+}
+
+draw(tree.items);*/
+
 function disease(){
    tree.items.push(items.disease);
+   document.getElementById("disease-button").setAttribute('disabled','disabled');
+   document.getElementById("disease-button").style.color = "white";
+  
 }
 
 function drought(){
     tree.items.push(items.drought);
+    document.getElementById("drought-button").setAttribute('disabled','disabled');
+    document.getElementById("drought-button").style.color = "white";
+  
 }
 
 function insects(){
     tree.items.push(items.insects);
+    document.getElementById("insects-button").setAttribute('disabled','disabled');
+    document.getElementById("insects-button").style.color = "white";
+  
 }
-
-function update(){
-  var healthDisplay = document.getElementById("health");
-  healthDisplay.innerText=tree.health;
-  var hitsDisplay = document.getElementById("hits");
-  hitsDisplay.innerText=tree.hits;
-  var nameDisplay = document.getElementById("name");
-  nameDisplay.innerText=tree.name;
-  tree.hits++;
-}
-
-
 
 function addMods(){
     var total=0;
+    //limiting the modifiers evaluated to 3 
     for(i=0;i<tree.items.length;i++){
         total =total + tree.items[i].modifier;
-
     } 
     if (total != 0){
         return total;
@@ -92,3 +107,6 @@ function addMods(){
 
 
 
+function reset(){
+    location.reload();
+}
