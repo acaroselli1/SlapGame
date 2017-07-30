@@ -30,6 +30,19 @@ function update(){
   var nameDisplay = document.getElementById("name");
   nameDisplay.innerText=tree.name;
   tree.hits++;
+  if (tree.health <= 0){
+      var gameOverDisplay = document.getElementById("game-over");
+      gameOverDisplay.innerText="Game Over!";
+      document.getElementById("easy-chop").setAttribute("src","treefall.wav");
+      document.getElementById("easy").setAttribute('disabled','disabled');
+      document.getElementById("medium").setAttribute('disabled','disabled');
+      document.getElementById("mega").setAttribute('disabled','disabled');
+      healthDisplay.innerText=0;
+      hitsDisplay.innerText=0;
+      tree.hits = 0;
+      document.getElementById("tree").classList.add("rotateOutDownRight");
+      gameOverDisplay.classList.add("flash");
+  }
 }
 
 function Item (name,modifier,description){
@@ -110,3 +123,44 @@ function addMods(){
 function reset(){
     location.reload();
 }
+
+function playEasyChop(){
+    
+    document.getElementById("easy-chop").play();
+}
+
+jQuery(document).ready(function($){
+	
+    
+
+var animationEnd = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
+
+var animation = "animated flip";
+
+var animation2= "animated shake";
+
+var animation3="hinge";
+
+     if (tree.health <= 0){
+
+        $("#tree").addClass(animation3);
+
+    
+     }
+	$(".chop").on("click", function(){
+      
+
+        $("#tree").addClass(animation2).one(animationEnd, function(){
+                   
+                     $("#tree").removeClass(animation2);
+
+        });
+     
+		$("#axe").addClass(animation).one(animationEnd, function(){
+                   
+                     $("#axe").removeClass(animation);
+
+        });
+    });
+            
+});

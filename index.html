@@ -26,6 +26,13 @@
                </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-xs-12 insert">
+                <div>
+                    <p id="game-over" class="animated"></p>
+                </div>
+            </div>
+        </div>
         <div class="row two">
            <div class="col-xs-4" id="mod-buttons">
                 <div class ="buttons">
@@ -34,21 +41,25 @@
                    <button id="insects-button" onclick="insects()">INSECTS</button>
                 </div>
             </div>
-            <div class="col-xs-4">
-                <div class="tree">
-                   <img src="tree.png" alt="tree">
+            <div class="col-xs-4 tree">
+                <div class="">
+                   <img src="tree.png" alt="tree" id="tree" class="animated">
+                   <img id = "axe" class=""src="http://freeiconbox.com/icon/256/28515.png" alt="axe" width="100px" height="50px">
                 </div>
             </div>
              <div class="col-xs-4">
                 <div class="buttons">
-                   <button id="easy" onclick="easyChop()">EASY CHOP</button>
-                   <button id="medium" onclick="mediumChop()">MEDIUM CHOP</button>
-                   <button id="mega" onclick="megaChop()">MEGA CHOP</button>
+                   <button class = "chop" id="easy" onclick="easyChop(), setTimeout(playEasyChop,1000)">EASY CHOP</button>
+                   <button class= "chop medium-button" id="medium" onclick="mediumChop(), setTimeout(playEasyChop,1000)">MEDIUM CHOP</button>
+                   <button class= "chop mega-button" id="mega" onclick="megaChop(), setTimeout(playEasyChop,1000)">MEGA CHOP</button>
                 </div>
             </div>
         </div>
-      
-        <div class="row three">
+       <div class="row three">
+            <div class="col-xs-12">
+            </div>
+        </div>
+        <div class="row four">
             <div class="col-xs-12 reset">
                <div class ="buttons">
                  <button id="reset" onclick="reset()">RESET</button>
@@ -56,6 +67,9 @@
             </div>
         </div>
     </div>
+    
+    <audio id="easy-chop" src="easychop.wav"></audio>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
     <script src="game.js"></script>
 </body>
 
