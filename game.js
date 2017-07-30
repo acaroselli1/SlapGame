@@ -129,6 +129,18 @@ function playEasyChop(){
     document.getElementById("easy-chop").play();
 }
 
+function playMediumChop(){
+    
+    document.getElementById("medium-chop").play();
+}
+
+function playMegaChop(){
+    
+    document.getElementById("mega-chop").play();
+}
+
+
+
 jQuery(document).ready(function($){
 	
     
@@ -150,15 +162,19 @@ var animation3="hinge";
 	$(".chop").on("click", function(){
       
 
-        $("#tree").addClass(animation2).one(animationEnd, function(){
-                   
-                     $("#tree").removeClass(animation2);
-
-        });
+       
      
 		$("#axe").addClass(animation).one(animationEnd, function(){
                    
                      $("#axe").removeClass(animation);
+
+ $("#tree").addClass(animation2).one(animationEnd, function(){
+                   
+                     $("#tree").removeClass(animation2);
+
+        });
+
+
 
         });
     });
