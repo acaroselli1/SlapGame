@@ -169,7 +169,7 @@ var animationEnd = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimation
 
 var animation = "animated flip";
 
-var animation2= "animated shake";
+var animation2= "shake";
 
 //var animation3="hinge";
 
