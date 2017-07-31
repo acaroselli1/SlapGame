@@ -80,6 +80,9 @@ function Target(name,health,hits){
 
 var tree = new Target("tree", 100,0);
 
+// // To initialize on screen.
+ update();
+
 /*function draw(itemArr) {
     
     var buttonTemplate = '';
@@ -168,14 +171,14 @@ var animation = "animated flip";
 
 var animation2= "animated shake";
 
-var animation3="hinge";
+//var animation3="hinge";
 
-     if (tree.health <= 0){
+  //   if (tree.health <= 0){
 
-        $("#tree").addClass(animation3);
+      //  $("#tree").addClass(animation3);
 
     
-     }
+   //  }
 	$(".chop").on("click", function(){
       
 
@@ -189,7 +192,11 @@ var animation3="hinge";
                    
                      $("#tree").removeClass(animation2);
 
-        });
+      //               if (tree.health <= 0){
+
+     //    $("#tree").addClass("rotateOutDownRight");}
+
+       });
 
 
 
