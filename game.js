@@ -1,24 +1,35 @@
 
 function easyChop(){
-
+    var smallAxe = document.getElementById("axe");
+    smallAxe.setAttribute("src","smallaxe.png");
+    smallAxe.style.right = 14 + "vw";
     tree.health=(tree.health - (1 * addMods()));
   //  alert(health);
-    update();
+    setTimeout(update, 1000);
+   // update();
  
 }
 
 function mediumChop(){
-
+    var mediumAxe =document.getElementById("axe");
+    mediumAxe.setAttribute("src","mediumaxe.png");
+    mediumAxe.style.right= 13.15 + "vw";
     tree.health=(tree.health-(5* addMods()));
   //  alert(health);
-    update();
+    setTimeout(update, 1000);
+  // update();
  
 }
 
 function megaChop(){
+    var megaAxe = document.getElementById("axe");
+    megaAxe.setAttribute("src","megaaxe.png");
+    megaAxe.style.right= 12 + "vw";
     tree.health=(tree.health-(10 * addMods()));
   //  alert(health);
-    update();
+    setTimeout(update, 1000);
+  // update();
+ 
     
 }
 
@@ -31,17 +42,17 @@ function update(){
   nameDisplay.innerText=tree.name;
   tree.hits++;
   if (tree.health <= 0){
+      document.getElementById("tree").classList.add("rotateOutDownRight");
+      document.getElementById("tree-fall").play();
       var gameOverDisplay = document.getElementById("game-over");
       gameOverDisplay.innerText="Game Over!";
-      document.getElementById("easy-chop").setAttribute("src","treefall.wav");
+      gameOverDisplay.classList.add("flash");
       document.getElementById("easy").setAttribute('disabled','disabled');
       document.getElementById("medium").setAttribute('disabled','disabled');
       document.getElementById("mega").setAttribute('disabled','disabled');
       healthDisplay.innerText=0;
       hitsDisplay.innerText=0;
       tree.hits = 0;
-      document.getElementById("tree").classList.add("rotateOutDownRight");
-      gameOverDisplay.classList.add("flash");
   }
 }
 
@@ -53,9 +64,9 @@ function Item (name,modifier,description){
 
 }
 var items ={
-    disease: new Item("disease",2,"Tree is sick!"),
-    drought: new Item("drought",2, "Tree needs water!"),
-    insects: new Item("insects",2, "Tree needs insecticide!")
+    disease: new Item("disease",2,"TREE IS SICK!"),
+    drought: new Item("drought",2, "TREE NEEDS WATER!"),
+    insects: new Item("insects",2, "TREE NEEDS INSECTICIDE!")
 
 }
 
@@ -88,6 +99,8 @@ draw(tree.items);*/
 
 function disease(){
    tree.items.push(items.disease);
+   var gameOverDisplay = document.getElementById("game-over");
+   gameOverDisplay.innerText+="..." + items.disease.description;
    document.getElementById("disease-button").setAttribute('disabled','disabled');
    document.getElementById("disease-button").style.color = "white";
   
@@ -95,6 +108,8 @@ function disease(){
 
 function drought(){
     tree.items.push(items.drought);
+    var gameOverDisplay = document.getElementById("game-over");
+    gameOverDisplay.innerText +="..." + items.drought.description;
     document.getElementById("drought-button").setAttribute('disabled','disabled');
     document.getElementById("drought-button").style.color = "white";
   
@@ -102,6 +117,8 @@ function drought(){
 
 function insects(){
     tree.items.push(items.insects);
+    var gameOverDisplay = document.getElementById("game-over");
+    gameOverDisplay.innerText+="..." + items.insects.description;
     document.getElementById("insects-button").setAttribute('disabled','disabled');
     document.getElementById("insects-button").style.color = "white";
   
