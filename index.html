@@ -36,22 +36,23 @@
         <div class="row two">
            <div class="col-xs-4" id="mod-buttons">
                 <div class ="buttons">
-                   <button id="disease-button" onclick="disease()">DISEASE</button>
-                   <button id="drought-button" onclick="drought()">DROUGHT</button>
-                   <button id="insects-button" onclick="insects()">INSECTS</button>
+                   <button id="disease-button" onclick="app.controllers.gameController.disease()">DISEASE</button>
+                   <button id="drought-button" onclick="app.controllers.gameController.drought()">DROUGHT</button>
+                   <button id="insects-button" onclick="app.controllers.gameController.insects()">INSECTS</button>
                 </div>
             </div>
             <div class="col-xs-4 tree">
                 <div class="">
-                   <img src="tree.png" alt="tree" id="tree" class="animated">
+                   <p id = "select-message" class="animated flash">SELECT A TREE!</P>
+                   <img id="tree" class="animated">
                    <img id = "axe" class=""src="smallaxe.png" alt="axe">
                 </div>
             </div>
              <div class="col-xs-4">
                 <div class="buttons">
-                   <button class = "chop" id="easy" onclick="easyChop(), setTimeout(playEasyChop,1000)">EASY CHOP</button>
-                   <button class= "chop medium-button" id="medium" onclick="mediumChop(), setTimeout(playMediumChop,1000), setTimeout(playEasyChop,1000)">MEDIUM CHOP</button>
-                   <button class= "chop mega-button" id="mega" onclick="megaChop(), setTimeout(playMegaChop,1000)">MEGA CHOP</button>
+                   <button class = "chop" id="easy" onclick="app.controllers.gameController.easyChop()">EASY CHOP</button>
+                   <button class= "chop medium-button" id="medium" onclick="app.controllers.gameController.mediumChop()">MEDIUM CHOP</button>
+                   <button class= "chop mega-button" id="mega" onclick="app.controllers.gameController.megaChop()">MEGA CHOP</button>
                 </div>
             </div>
         </div>
@@ -60,9 +61,18 @@
             </div>
         </div>
         <div class="row four">
-            <div class="col-xs-12 reset">
+             <div class="col-xs-4">
+            </div>
+            <div class="col-xs-4 reset">
                <div class ="buttons">
-                 <button id="reset" onclick="reset()">RESET</button>
+                 <button id="reset" onclick="app.controllers.gameController.reset()">RESET</button>
+               </div>
+            </div>
+            <div class="col-xs-4">
+               <div class ="buttons choose-tree">
+                 <button id="tree1" onclick="app.controllers.gameController.selectTree1()">TREE1</button>
+                 <button id="tree2" onclick="app.controllers.gameController.selectTree2()">TREE2</button>
+                 <button id="tree3" onclick="app.controllers.gameController.selectTree3()">TREE3</button>
                </div>
             </div>
         </div>
@@ -71,7 +81,20 @@
     <audio id="mega-chop" src="megachop.mp3"></audio>
     <audio id="medium-chop" src="mediumchop.mp3"></audio>
     <audio id="easy-chop" src="easychop.wav"></audio>
+  
+   <!-- LOAD EXTERNAL LIBRARIES -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+   
+
+    <!-- LOAD SERVICES  -->
+    <script src="service.js"></script>
+    <!-- LOAD CONTROLLERS  -->
+    <script src="controller.js"></script>
+
+    <!-- INSTANTIATE THE APPLICATION  -->
+    
+    
+    
     <script src="game.js"></script>
 </body>
 

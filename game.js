@@ -1,12 +1,23 @@
+var app = {
+    controllers: {
+        gameController: new GameController()
+    }
+}
 
+
+
+
+
+
+
+/*
 function easyChop(){
     var smallAxe = document.getElementById("axe");
     smallAxe.setAttribute("src","smallaxe.png");
     smallAxe.style.right = 14 + "vw";
     tree.health=(tree.health - (1 * addMods()));
-  //  alert(health);
     setTimeout(update, 1000);
-   // update();
+ 
  
 }
 
@@ -15,9 +26,8 @@ function mediumChop(){
     mediumAxe.setAttribute("src","mediumaxe.png");
     mediumAxe.style.right= 13.15 + "vw";
     tree.health=(tree.health-(5* addMods()));
-  //  alert(health);
     setTimeout(update, 1000);
-  // update();
+
  
 }
 
@@ -26,9 +36,9 @@ function megaChop(){
     megaAxe.setAttribute("src","megaaxe.png");
     megaAxe.style.right= 12 + "vw";
     tree.health=(tree.health-(10 * addMods()));
-  //  alert(health);
+
     setTimeout(update, 1000);
-  // update();
+
  
     
 }
@@ -80,25 +90,25 @@ function Target(name,health,hits){
 
 var tree = new Target("tree", 100,0);
 
-// // To initialize on screen.
+
  update();
 
-/*function draw(itemArr) {
+//function draw(itemArr) {
     
-    var buttonTemplate = '';
+  //  var buttonTemplate = '';
 
-    for (var i = 0; i < tree.items.length; i++) {
-        var item = tree.items[i];
-        //check number of pets, to determine status
+//    for (var i = 0; i < tree.items.length; i++) {
+   //     var item = tree.items[i];
+    
         
-        buttonTemplate += `
-       <button onclick="${item}()">${item}!</button>
-        `
-    }
-    document.getElementById('mod-buttons').innerHTML = buttonTemplate;
-}
+    //    buttonTemplate += `
+ //      <button onclick="${item}()">${item}!</button>
+ //      `
+ //   }
+ //   document.getElementById('mod-buttons').innerHTML = buttonTemplate;
+//}
 
-draw(tree.items);*/
+//draw(tree.items);
 
 function disease(){
    tree.items.push(items.disease);
@@ -129,7 +139,6 @@ function insects(){
 
 function addMods(){
     var total=0;
-    //limiting the modifiers evaluated to 3 
     for(i=0;i<tree.items.length;i++){
         total =total + tree.items[i].modifier;
     } 
@@ -171,14 +180,6 @@ var animation = "animated flip";
 
 var animation2= "shake";
 
-//var animation3="hinge";
-
-  //   if (tree.health <= 0){
-
-      //  $("#tree").addClass(animation3);
-
-    
-   //  }
 	$(".chop").on("click", function(){
       
 
@@ -192,9 +193,6 @@ var animation2= "shake";
                    
                      $("#tree").removeClass(animation2);
 
-      //               if (tree.health <= 0){
-
-     //    $("#tree").addClass("rotateOutDownRight");}
 
        });
 
@@ -204,3 +202,4 @@ var animation2= "shake";
     });
             
 });
+*/
