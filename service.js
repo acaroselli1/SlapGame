@@ -87,6 +87,10 @@ function GameService() {
     dataStore.mediumChop = function mediumChop() {
         target.health = (target.health - (5 * this.addMods()));
         target.hits++;
+      
+  
+      
+      
         // target.hits++;
         //  alert(health);
            
@@ -105,6 +109,13 @@ function GameService() {
 
 
     }
+    dataStore.tornado = function tornado() {
+        target.health = 0;
+        target.hits++;
+    }
+
+
+
 
     dataStore.disease = function disease() {
         target.items.push(items.disease);

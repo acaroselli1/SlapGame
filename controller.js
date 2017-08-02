@@ -53,6 +53,25 @@ function GameController() {
             setTimeout(update, 1000);
         }
 
+         this.special = function special() {
+            document.getElementById("tree").classList.add("hinge");
+        }
+        
+        this.tornado = function tornado() {
+            dataStore.tornado();
+            this.playTornado();
+            document.getElementById("tornado-image").classList.add("fadeOutLeftBig");
+            setTimeout(this.special,250);
+            setTimeout(update,250);
+        }
+
+ 
+
+
+
+
+
+
         this.disease = function disease() {
             dataStore.disease();
             var gameOverDisplay = document.getElementById("game-over");
@@ -99,10 +118,14 @@ function GameController() {
 
             document.getElementById("mega-chop").play();
         }
-
+        
+        this.playTornado = function playTornado(){
+            document.getElementById("tornado-sound").play();
+        }
+        
         this.selectTree1 = function selectTree1() {
             var nameDisplay = document.getElementById("name");
-            nameDisplay.innerText = "TREE1";
+            nameDisplay.innerText = "OAK";
             document.getElementById("tree").src = "tree1.png";
             document.getElementById("select-message").innerText ="";
             document.getElementById("tree2").setAttribute('disabled', 'disabled');
@@ -113,7 +136,7 @@ function GameController() {
 
          this.selectTree2 = function selectTree2() {
             var nameDisplay = document.getElementById("name");
-            nameDisplay.innerText = "TREE2";
+            nameDisplay.innerText = "MAPLE";
             document.getElementById("tree").src = "tree2.png";
             document.getElementById("select-message").innerText ="";
             document.getElementById("tree1").setAttribute('disabled', 'disabled');
@@ -125,7 +148,7 @@ function GameController() {
 
         this.selectTree3 = function selectTree3() {
             var nameDisplay = document.getElementById("name");
-            nameDisplay.innerText = "TREE3";
+            nameDisplay.innerText = "COTTONWOOD";
             document.getElementById("tree").src = "tree3.png";
             document.getElementById("select-message").innerText ="";
             document.getElementById("tree1").setAttribute('disabled', 'disabled');

@@ -111,6 +111,9 @@ button{
     background-color:red;
 }
 
+#tornado:hover{
+    background-color:grey;
+}
 #select-message{
    
     font-size:4rem;
@@ -119,4 +122,10 @@ button{
 
 #game-over{
     font-size:5rem;
+}
+
+#tornado-image{
+ position:absolute;
+ right:-65vw;
+ bottom:-5vh;
 }

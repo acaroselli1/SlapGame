@@ -46,6 +46,7 @@
                    <p id = "select-message" class="animated flash">SELECT A TREE!</P>
                    <img id="tree" class="animated">
                    <img id = "axe" class=""src="smallaxe.png" alt="axe">
+                   <img id ="tornado-image" class ="animated" src=tornado.png></span>
                 </div>
             </div>
              <div class="col-xs-4">
@@ -53,11 +54,13 @@
                    <button class = "chop" id="easy" onclick="app.controllers.gameController.easyChop()">EASY CHOP</button>
                    <button class= "chop medium-button" id="medium" onclick="app.controllers.gameController.mediumChop()">MEDIUM CHOP</button>
                    <button class= "chop mega-button" id="mega" onclick="app.controllers.gameController.megaChop()">MEGA CHOP</button>
+                   <button class= "tornado-button" id="tornado" onclick="app.controllers.gameController.tornado()">TORNADO</button>
                 </div>
             </div>
         </div>
        <div class="row three">
             <div class="col-xs-12">
+          
             </div>
         </div>
         <div class="row four">
@@ -70,10 +73,10 @@
             </div>
             <div class="col-xs-4">
                <div class ="buttons choose-tree">
-                 <button id="tree1" onclick="app.controllers.gameController.selectTree1()">TREE1</button>
-                 <button id="tree2" onclick="app.controllers.gameController.selectTree2()">TREE2</button>
-                 <button id="tree3" onclick="app.controllers.gameController.selectTree3()">TREE3</button>
-               </div>
+                 <button id="tree1" onclick="app.controllers.gameController.selectTree1()">OAK</button>
+                 <button id="tree2" onclick="app.controllers.gameController.selectTree2()">MAPLE</button>
+                 <button id="tree3" onclick="app.controllers.gameController.selectTree3()">COTTONWOOD</button>
+                </div>
             </div>
         </div>
     </div>
@@ -81,6 +84,7 @@
     <audio id="mega-chop" src="megachop.mp3"></audio>
     <audio id="medium-chop" src="mediumchop.mp3"></audio>
     <audio id="easy-chop" src="easychop.wav"></audio>
+    <audio id="tornado-sound" src="tornado.wav"></audio>
   
    <!-- LOAD EXTERNAL LIBRARIES -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
