@@ -19,63 +19,61 @@
     <div class="container-fluid">
         <div class="row one">
             <div class="col-xs-12">
-                <div class = "update">
+                <div class="update">
                     <span>Name: <span id="name"></span></span>
                     <span>Hits: <span id="hits">0</span></span>
                     <span>Health: <span id="health">100</span></span>
-               </div>
+                </div>
             </div>
         </div>
         <div class="row">
             <div class="col-xs-12 insert">
                 <div>
-                    <p id="game-over" class="animated"></p>
+                    <p id="game-over" class="animated">VIRTUAL LUMBERJACK</p>
                 </div>
             </div>
         </div>
         <div class="row two">
-           <div class="col-xs-4" id="mod-buttons">
-                <div class ="buttons">
-                   <button id="disease-button" onclick="app.controllers.gameController.disease()">DISEASE</button>
-                   <button id="drought-button" onclick="app.controllers.gameController.drought()">DROUGHT</button>
-                   <button id="insects-button" onclick="app.controllers.gameController.insects()">INSECTS</button>
+            <div class="col-xs-4" id="mod-buttons">
+                <div class="buttons">
+                    <button id="disease-button" onclick="app.controllers.gameController.disease()">DISEASE</button>
+                    <button id="drought-button" onclick="app.controllers.gameController.drought()">DROUGHT</button>
+                    <button id="insects-button" onclick="app.controllers.gameController.insects()">INSECTS</button>
                 </div>
             </div>
             <div class="col-xs-4 tree">
-                <div class="">
-                   <p id = "select-message" class="animated flash">SELECT A TREE!</P>
-                   <img id="tree" class="animated">
-                   <img id = "axe" class=""src="smallaxe.png" alt="axe">
-                   <img id ="tornado-image" class ="animated" src=tornado.png></span>
-                </div>
+                <p id="select-message" class="animated flash">SELECT A TREE!</P>
+                <img id="tree" class="animated">
+                <img id="axe" class="" src="smallaxe.png" alt="axe">
+                <img id="tornado-image" class="animated" src=tornado.png></span>
             </div>
-             <div class="col-xs-4">
+            <div class="col-xs-4">
                 <div class="buttons">
-                   <button class = "chop" id="easy" onclick="app.controllers.gameController.easyChop()">EASY CHOP</button>
-                   <button class= "chop medium-button" id="medium" onclick="app.controllers.gameController.mediumChop()">MEDIUM CHOP</button>
-                   <button class= "chop mega-button" id="mega" onclick="app.controllers.gameController.megaChop()">MEGA CHOP</button>
-                   <button class= "tornado-button" id="tornado" onclick="app.controllers.gameController.tornado()">TORNADO</button>
+                    <button class="chop" id="easy" onclick="app.controllers.gameController.easyChop()">EASY</button>
+                    <button class="chop medium-button" id="medium" onclick="app.controllers.gameController.mediumChop()">MEDIUM</button>
+                    <button class="chop mega-button" id="mega" onclick="app.controllers.gameController.megaChop()">MEGA</button>
+                    <button class="tornado-button" id="tornado" onclick="app.controllers.gameController.tornado()">TORNADO</button>
                 </div>
             </div>
         </div>
-       <div class="row three">
+        <div class="row three">
             <div class="col-xs-12">
-          
+
             </div>
         </div>
         <div class="row four">
-             <div class="col-xs-4">
+            <div class="col-xs-4">
             </div>
             <div class="col-xs-4 reset">
-               <div class ="buttons">
-                 <button id="reset" onclick="app.controllers.gameController.reset()">RESET</button>
-               </div>
+                <div class="buttons">
+                    <button id="reset" onclick="app.controllers.gameController.reset()">RESET</button>
+                </div>
             </div>
             <div class="col-xs-4">
-               <div class ="buttons choose-tree">
-                 <button id="tree1" onclick="app.controllers.gameController.selectTree1()">OAK</button>
-                 <button id="tree2" onclick="app.controllers.gameController.selectTree2()">MAPLE</button>
-                 <button id="tree3" onclick="app.controllers.gameController.selectTree3()">COTTONWOOD</button>
+                <div class="buttons choose-tree">
+                    <button id="tree1" onclick="app.controllers.gameController.selectTree1()">OAK</button>
+                    <button id="tree2" onclick="app.controllers.gameController.selectTree2()">MAPLE</button>
+                    <button id="tree3" onclick="app.controllers.gameController.selectTree3()">COTTONWOOD</button>
                 </div>
             </div>
         </div>
@@ -85,10 +83,10 @@
     <audio id="medium-chop" src="mediumchop.mp3"></audio>
     <audio id="easy-chop" src="easychop.wav"></audio>
     <audio id="tornado-sound" src="tornado.wav"></audio>
-  
-   <!-- LOAD EXTERNAL LIBRARIES -->
+
+    <!-- LOAD EXTERNAL LIBRARIES -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-   
+
 
     <!-- LOAD SERVICES  -->
     <script src="service.js"></script>
@@ -96,9 +94,9 @@
     <script src="controller.js"></script>
 
     <!-- INSTANTIATE THE APPLICATION  -->
-    
-    
-    
+
+
+
     <script src="game.js"></script>
 </body>
 
